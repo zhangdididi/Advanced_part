@@ -1,0 +1,39 @@
+#define _CRT_SECURE_NO_WARNINGS 1
+#include <stdio.h>
+#include <stdlib.h>
+void Set_odd(int *left, int *right)
+{
+	int ret = 0;
+	while (left < right)
+	{
+		while (1 == (*left % 2))
+		{
+			left ++;
+		}
+		while (0 == (*right % 2))
+		{
+			right --;
+		}
+		if (left < right)
+		{
+			ret = *right;
+			*right = *left;
+			*left = ret;
+		}
+	}
+}
+int main()
+{
+	int i = 0;
+	int arr[] = { 2, 1, 4, 5, 8, 9, 3, 7, 6, 10 };
+	int sz = sizeof(arr) / sizeof(arr[0]);
+	int* left = arr;
+	int* right = arr + sz - 1;
+	Set_odd(left, right);
+	for (i = 0; i <= 9; i++)
+	{
+		printf("%d ", arr[i]);
+	}
+	system("pause");
+	return 0;
+}
