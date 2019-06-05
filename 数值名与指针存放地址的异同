@@ -1,7 +1,6 @@
 #define _CRT_SECURE_NO_WARNINGS 1
 #include <stdio.h>
 #include <stdlib.h>
-
 int main()
 {
 	char str1[] = "hello world.";
@@ -29,3 +28,4 @@ int main()
 	system("pause");
 	return 0;
 }
+//输出结果为str1 and str2 are not same和 str3 and str4 are same
