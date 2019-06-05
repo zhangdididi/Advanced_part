@@ -13,9 +13,9 @@ int Search_num(int arr[3][3], int ret)
 		else if (arr[row][col] < ret)
 			row++;
 		else
-			return 1;
+			return 1;//找到目标数返回1
 	}
-	return -1;
+	return -1;//没找到目标数返回-1
 }
 
 int main()
@@ -23,7 +23,7 @@ int main()
 	int n = 0;
 	int arr[3][3] = { 1,2,3,2,3,4,3,4,5 };//创建三行三列杨氏矩阵二维数组
 	int num = 0;
-	scanf("%d", &num);
+	scanf("%d", &num);//输入要找的数字
 	n = Search_num(arr, num);
 	if (1 == n)
 	{
