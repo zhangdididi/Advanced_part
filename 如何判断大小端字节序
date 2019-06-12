@@ -5,7 +5,7 @@
 int check_sys()
 {
 	int i = 1;
-	return (*(char *)& i);//将i强转为char类型，去得到它的存储地址
+	return (*(char *)& i);//将i强转为char类型，然后再得到它的存储地址
 }
 int main()
 {
