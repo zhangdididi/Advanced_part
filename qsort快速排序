@@ -1,0 +1,21 @@
+#define _CRT_SECURE_NO_WARNINGS 1
+#include <stdio.h>
+#include <stdlib.h>
+/*void qsort(void *base, size_t num, size_t width, 
+	int(__cdecl *compare)(const void *elem1, const void *elem2))*/
+//整形比较
+int Int_cmp(const void *elem1, const void *elem2)
+{
+	return (*(int *)elem1) - (*(int *)elem2);
+}
+int main()
+{
+	int arr[10] = { 2, 3, 1, 54, 233, 15, 32, 82, 12, 10 };
+	qsort(arr, sizeof(arr)/ sizeof(arr[0]), sizeof(int), Int_cmp);
+	for (int i = 0; i < 10; i++)
+	{
+		printf("%d ", arr[i]);
+	}
+	system("pause");
+	return 0;
+}
