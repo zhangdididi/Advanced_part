@@ -1,0 +1,44 @@
+#define _CRT_SECURE_NO_WARNINGS 1
+#include <stdio.h>
+int Add(int x, int y)
+{
+	return x + y;
+}
+int Sub(int x, int y)
+{
+	return x - y;
+}
+int Mul(int x, int y)
+{
+	return x * y;
+}
+int Div(int x, int y)
+{
+	return x / y;
+}
+//以上为加减乘除四个函数
+void menu()
+{
+	printf("1.Add\n2.Sub\n3.Mul\n4.Div\n");
+}
+int main()
+{
+	int input = 0;//input用来做不同计算函数的选项
+	int a = 0;
+	int b = 0;
+	int(*Pfun[5])(int, int) = { 0, Add, Sub, Mul, Div };
+	//第一个元素为0,使元素下标1234分别代表加减乘除函数
+	do
+	{
+		menu();
+		printf("请输入菜单选项: ");
+		scanf("%d", &input);
+		if (input >= 1 && input <= 4)
+		{
+			printf("请输入两个操作数：");
+			scanf("%d %d", &a, &b);
+			printf("%d\n", Pfun[input](a, b));
+		}
+	} while (input);
+	return 0;
+}
