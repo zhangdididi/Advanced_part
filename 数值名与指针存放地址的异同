@@ -4,9 +4,9 @@
 int main()
 {
 	char str1[] = "hello world.";
-	char str2[] = "hello world.";
+	char str2[] = "hello world.";//创建数组接收字符串
 	char *str3  = "hello world.";
-	char *str4  = "hello world.";
+	char *str4  = "hello world.";//创建指针指向字符串
 
 	if (str1 == str2)
 	{
