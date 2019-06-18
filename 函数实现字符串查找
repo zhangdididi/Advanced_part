@@ -9,6 +9,7 @@ char *Mystrstr(const char *str1, const char *str2)
 	{
 		s1 = start;
 		s2 = str2;
+                //相应下标指针相同且不为'\0'
 		while (*s1 == *s2 && *s2 != '\0' && *s2 != '\0')
 		{
 			s1++;
