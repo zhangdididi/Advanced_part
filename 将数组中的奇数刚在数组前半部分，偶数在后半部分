@@ -6,11 +6,11 @@ void Set_odd(int *left, int *right)
 	int ret = 0;
 	while (left < right)
 	{
-		while (1 == (*left % 2))
+		while (1 == (*left % 2))//左边为奇数时，下标+1，不作调整
 		{
 			left ++;
 		}
-		while (0 == (*right % 2))
+		while (0 == (*right % 2))//右边为偶数时，下标-1，不作调整
 		{
 			right --;
 		}
