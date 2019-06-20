@@ -39,7 +39,7 @@ int main()
 	char str1[] = "abcdefg";
 	char *str2 = "defgabc";
 	int ret = is_left_move(str1, str2);
-	printf("%d\n", ret);
+	printf("%d\n", ret);//返回值为1表示是左旋，0表示不是
 	system("pause");
 	return 0;
 }
