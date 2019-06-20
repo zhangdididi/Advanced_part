@@ -1,0 +1,32 @@
+#define _CRT_SECURE_NO_WARNINGS 1
+#include <stdio.h>
+#include <assert.h>
+#include <string.h>
+void Reverse(char *left, char *right)//逆置函数
+{
+	while (left < right)
+	{
+		char tmp = *left;
+		*left = *right;
+		*right = tmp;
+		left++;
+		right--;
+	}
+}
+void left_move(char *str, int k)//三次逆置
+{
+	assert(str != NULL);
+	Reverse(str, str + k - 1); 
+	Reverse(str + k, str + strlen(str) - 1);
+	Reverse(str, str + strlen(str) - 1);
+}
+int main()
+{
+	char arr[] = "abcdefg";
+	int k = 0;
+	scanf("%d", &k);
+	left_move(arr, k);
+	printf("%s", arr);
+	system("pause");
+	return 0;
+}
