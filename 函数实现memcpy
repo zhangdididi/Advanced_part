@@ -11,7 +11,7 @@ void *Mymemcpy(void *dest, void *arr2, int count)
 		*((char*)arr2)++;
 		count--;
 	}
-	return p;
+	return p;//返回p为void *类型
 }
 int main()
 {
