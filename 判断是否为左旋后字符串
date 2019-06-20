@@ -1,0 +1,45 @@
+#define _CRT_SECURE_NO_WARNINGS 1
+#include <stdio.h>
+#include <assert.h>
+#include <string.h>
+void Reverse(char *left, char *right)//逆置函数
+{
+	while (left < right)
+	{
+		char tmp = *left;
+		*left = *right;
+		*right = tmp;
+		left++;
+		right--;
+	}
+}
+void left_move(char *str, int k)//左旋函数
+{
+	assert(str != NULL);
+	Reverse(str, str + k - 1); 
+	Reverse(str + k, str + strlen(str) - 1);
+	Reverse(str, str + strlen(str) - 1);
+}
+int is_left_move(char *arr, const char *p)//判断函数
+{
+	unsigned int i = 0;
+	assert(arr != NULL && p != NULL);
+	for (i = 0; i < strlen(arr); i++)
+	{
+		left_move(arr, 1);//每次左旋一个字符进行字符窜比较，直到一样为止，否则返回0
+		if (strcmp(arr, p) == 0)
+		{
+			return 1;
+		}
+	}
+	return 0;
+}
+int main()
+{
+	char str1[] = "abcdefg";
+	char *str2 = "defgabc";
+	int ret = is_left_move(str1, str2);
+	printf("%d\n", ret);
+	system("pause");
+	return 0;
+}
