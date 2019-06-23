@@ -1,0 +1,33 @@
+#define _CRT_SECURE_NO_WARNINGS 1
+#include <stdio.h>
+#include <assert.h>
+#include <string.h>
+void *Mymemmove(void *dest, const void *src, int count)
+{
+  assert(dest != NULL && src != NULL);
+	void *ret = dest;
+	if(dest < src) 
+	{
+		while(count--)
+		{
+			*(char *)dest = *(char *)src;
+			((char *)dest)++;
+			((char *)src)++;
+		}
+	}
+	else
+	{
+		while (count--)
+		{ 
+			*((char *)dest + count) = *((char *)src + count);
+		}
+	}
+}
+int main()
+{
+	//int arr1[20] = { 0 };
+	int arr2[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+	Mymemmove(arr2+2, arr2, 16);
+	system("pause");
+	return 0;
+}
