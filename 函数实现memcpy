@@ -1,8 +1,10 @@
 #define _CRT_SECURE_NO_WARNINGS 1
 #include <stdio.h>
+#include <assert.h>
 #include <string.h>
 void *Mymemcpy(void *dest, void *arr2, int count)
 {
+        assert(dest != NULL && arr2 != NULL);
 	void *p = dest;
 	while (count != 0)
 	{
