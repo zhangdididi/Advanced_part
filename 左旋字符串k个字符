@@ -2,7 +2,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
 void left_move(char *str, int k, int len)
 {
 	int i = 0;
