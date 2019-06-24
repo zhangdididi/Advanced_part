@@ -7,6 +7,7 @@ struct Point
 };
 int main()
 {
-	printf("%d\n", &(((struct Point *)0) -> ch));
+	int num = &(((struct Point *)0) -> ch);
+	printf("%d\n", num);
 	return 0;
 }
