@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <assert.h>
+int* twoSum(int* nums, int numsSize, int target)
+{
+	assert(nums != NULL);
+	static int a[2] = { 0 };
+	for (int i = 0; i < numsSize - 1; i++)
+	{
+		for (int j = i + 1; j < numsSize; j++)
+		{
+			if (nums[i] + nums[j] == target)
+			{
+				a[0] = i;
+				a[1] = j;
+				return a;
+			}
+		}
+	}
+	return 0;
+}
+int main()
+{
+	int nums[] = { 2, 7, 11, 15 };
+	int sz = sizeof(nums)/sizeof(nums[0]);
+	int *ret = twoSum(nums, sz, 9);
+	printf("%d, %d", ret[0], ret[1]);
+	return 0;
+}
