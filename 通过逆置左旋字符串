@@ -27,6 +27,5 @@ int main()
 	scanf("%d", &k);
 	left_move(arr, k);
 	printf("%s", arr);
-	system("pause");
 	return 0;
 }
