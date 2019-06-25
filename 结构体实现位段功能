@@ -1,10 +1,10 @@
 #include <stdio.h>
 struct S 
 { 
-	char a : 3;    
-	char b : 4;    
-	char c : 5;    
-	char d : 4; 
+	char a : 3;  //a占用三个bit位  
+	char b : 4;  //b占用四个bit位
+	char c : 5;  //c占用五个bit位
+	char d : 4;  //d占用四个bit位
 }; 
 int main()
 {
