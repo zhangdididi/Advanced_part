@@ -15,10 +15,10 @@ void Reverse(char *left, char *right)//逆置函数
 }
 void left_move(char *str, int k)//三次逆置
 {
-	assert(str != NULL);
-	Reverse(str, str + k - 1); 
-	Reverse(str + k, str + strlen(str) - 1);
-	Reverse(str, str + strlen(str) - 1);
+	assert(str != NULL);//断言
+	Reverse(str, str + k - 1);//要左旋的k个字符逆置 
+	Reverse(str + k, str + strlen(str) - 1);//k之后的元素逆置
+	Reverse(str, str + strlen(str) - 1);//整体逆置
 }
 int main()
 {
