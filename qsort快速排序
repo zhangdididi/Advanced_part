@@ -3,7 +3,7 @@
 #include <stdlib.h>
 /*void qsort(void *base, size_t num, size_t width, 
 	int(__cdecl *compare)(const void *elem1, const void *elem2))*/
-//整形比较
+//自己实现整形比较
 int Int_cmp(const void *elem1, const void *elem2)
 {
 	return *((int *)elem1) - *(int *)elem2);
