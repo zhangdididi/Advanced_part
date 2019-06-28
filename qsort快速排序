@@ -1,8 +1,5 @@
 #define _CRT_SECURE_NO_WARNINGS 1
 #include <stdio.h>
-#include <stdlib.h>
-/*void qsort(void *base, size_t num, size_t width, 
-	int(__cdecl *compare)(const void *elem1, const void *elem2))*/
 //自己实现整形比较
 int Int_cmp(const void *elem1, const void *elem2)
 {
@@ -16,6 +13,5 @@ int main()
 	{
 		printf("%d ", arr[i]);//打印数组
 	}
-	system("pause");
 	return 0;
 }
