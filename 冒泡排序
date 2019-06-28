@@ -34,6 +34,5 @@ int main()
 	{
 		printf("%d ", arr[i]);//打印函数
 	}
-	system("pause");
 	return 0;
 }
