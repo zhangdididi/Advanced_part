@@ -3,7 +3,7 @@ char *Mystrstr(const char *str1, const char *str2)
 {
 	const char *s1 = str1;
 	const char *s2 = str2;
-	const char *start = s1;
+	const char *start = s1;//创建三个同类型指针去接收str1和str2的地址
 	assert(str1 != NULL && str2 != NULL);
 	while (*start != '\0')
 	{
