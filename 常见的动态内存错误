@@ -6,3 +6,18 @@ void test()
 	free(p); 
 } 
 
+//对动态开辟空间的越界访问
+void test() 
+{
+	int i = 0;  
+	int *p = (int *)malloc(10 * sizeof(int));  //开辟空间为10个整形，即40个字节，地址是从0到9
+	if (NULL == p)  
+	{ 
+		exit(EXIT_FAILURE); 
+	}  
+	for (i = 0; i <= 10; i++)  
+	{
+		*(p + i) = i;//当i是10的时候越界访问  
+	}  
+	free(p); 
+}
