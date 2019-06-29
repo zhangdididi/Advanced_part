@@ -5,6 +5,12 @@ void test()
 	*p = 20;//如果p的值是NULL，就会出现错误  
 	free(p); 
 } 
+int main()
+{ 
+	test();  
+	while (1); 
+	return 0;
+}
 
 //对动态开辟空间的越界访问
 void test() 
@@ -21,3 +27,25 @@ void test()
 	}  
 	free(p); 
 }
+int main()
+{ 
+	test();  
+	while (1); 
+	return 0;
+}
+
+//对非动态开辟内存进行free释放
+void test() 
+{
+	int a = 10;  
+	int *p = &a;  
+	free(p);//对没有进行动态开辟的内存进行释放发生错误 
+}
+int main()
+{ 
+	test();  
+	while (1); 
+	return 0;
+}
+
+//
