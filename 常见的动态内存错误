@@ -49,3 +49,19 @@ int main()
 }
 
 //使用free释放一块动态开辟内存的一部分
+void test() 
+{
+	int *p = (int *)malloc(100);  
+	p++;//p指向的起始位置发生改变
+	free(p);//p不再指向动态内存的起始位置 
+}
+int main()
+{
+	test();
+	while (1);
+	return 0;
+}
+
+
+
+
