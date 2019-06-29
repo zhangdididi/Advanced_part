@@ -1,0 +1,8 @@
+//对NULL指针的解引用操作
+void test() 
+{
+	int *p = (int *)malloc(INT_MAX / 4);  
+	*p = 20;//如果p的值是NULL，就会出现错误  
+	free(p); 
+} 
+
