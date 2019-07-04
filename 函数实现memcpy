@@ -4,7 +4,7 @@
 #include <string.h>
 void *Mymemcpy(void *dest, void *arr2, int count)
 {
-        assert(dest != NULL && arr2 != NULL);
+        assert(dest != NULL && arr2 != NULL);//断言
 	void *p = dest;
 	while (count != 0)
 	{
