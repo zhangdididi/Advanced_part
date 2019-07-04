@@ -15,7 +15,7 @@ void Reverse(char *left, char *right)//逆置函数
 }
 void left_move(char *str, int k)//左旋函数
 {
-	assert(str != NULL);
+	assert(str != NULL);//断言
 	Reverse(str, str + k - 1); 
 	Reverse(str + k, str + strlen(str) - 1);
 	Reverse(str, str + strlen(str) - 1);
