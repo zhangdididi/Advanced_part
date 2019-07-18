@@ -30,6 +30,5 @@ int main()
 	{
 		printf("%d is not in arr\n", num);
 	}
-	system("pause");
 	return 0;
 }
