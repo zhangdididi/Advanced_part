@@ -27,8 +27,8 @@ void Find(int arr[3][3], int *px, int *py, int key)
 int main()
 {
 	int  arr[3][3]= { 1, 2, 3,
-                             2, 3, 4,
-							 3, 4, 5};
+                          2, 3, 4,
+			  3, 4, 5};
 	int x = 3;
 	int y = 3;
 	int key = 0;
