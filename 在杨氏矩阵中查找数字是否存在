@@ -1,5 +1,4 @@
 #include <stdio.h>
-
 int Search_num(int arr[3][3], int ret)
 {
 	int row = 0;
