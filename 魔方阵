@@ -1,0 +1,40 @@
+#define ROW 3
+void Func2(int arr[][ROW])
+{
+	int tmpRow = 0;
+	int tmpCol = ROW / 2;
+	int i = 2;
+	arr[tmpRow][tmpCol] = 1;
+	//2-n^2
+	for (i = 2; i <= ROW*ROW; i++)
+	{
+		//判断上一行下一列是否有数据
+		if (arr[(tmpRow - 1 + ROW) % ROW][(tmpCol + 1) % ROW] != 0)
+		{
+			tmpRow = (tmpRow + 1) % ROW;//有数据将数字赋给下一行
+		}
+		else
+		{
+			tmpRow = (tmpRow - 1 + ROW) % ROW;
+			tmpCol = (tmpCol + 1) % ROW;
+		}
+		arr[tmpRow][tmpCol] = i;
+	}
+}
+
+int main()
+{
+	int i = 0;
+	int j = 0;
+	int arr[3][3] = { 0 };
+	Func2(arr);
+	for (i = 0; i < 3; i++)
+	{
+		for (j = 0; j < 3; j++)
+		{
+			printf("%d ", arr[i][j]);
+		}
+		printf("\n");
+	}
+	return 0;
+}
