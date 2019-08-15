@@ -1,0 +1,44 @@
+int BlankNum(char *str, int len)
+{
+	int i = 0;
+	int count = 0;
+	for (i = 0; i < len; i++)
+	{
+		if (*(str + i) == ' ')
+		{
+			count++;
+		}
+	}
+	return count;
+}
+
+void Replace(char *str, int len, int newlen)
+{
+	while (newlen > len)
+	{
+		if (*(str + len) != ' ')
+		{
+			*(str + newlen) = *(str + len);
+			len--;
+			newlen--;
+		}
+		else
+		{
+			*(str + newlen--) = '0';
+			*(str + newlen--) = '2';
+			*(str + newlen--) = '%';
+			len--;
+		}
+	}
+
+}
+int main()
+{
+	char str[50] = "abc defgx yz";
+	int len = strlen(str);
+	int blanknum = BlankNum(str,len);
+	int newlen = len + blanknum * 2;
+	Replace(str,len,newlen);
+	printf("%s\n", str);
+	return 0;
+}
