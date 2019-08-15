@@ -1,3 +1,4 @@
+//计算空格数量
 int BlankNum(char *str, int len)
 {
 	int i = 0;
