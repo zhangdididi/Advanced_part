@@ -1,0 +1,21 @@
+char RepeatChar(char *str)
+{
+	int arr[256] = { 0 };
+	while (*str != '\0')
+	{
+		arr[*str]++;
+		if (arr[*str] == 2)
+		{
+			return *str;
+		}
+		str++;
+	}
+	return -1;
+}
+
+int main()
+{
+	char str[] = "qyqyer23tdd";
+	printf("%c\n", RepeatChar(str));
+	return 0;
+}
