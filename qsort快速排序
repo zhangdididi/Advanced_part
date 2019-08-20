@@ -1,4 +1,3 @@
-#define _CRT_SECURE_NO_WARNINGS 1
 #include <stdio.h>
 //自己实现整形比较
 int Int_cmp(const void *elem1, const void *elem2)
