@@ -23,6 +23,5 @@ int main()
 	char *str1 = "abcdefg";
 	char *ret = Mystrchr(str1, 'c');
 	printf("%s\n", ret);
-	system("pause");
 	return 0;
 }
