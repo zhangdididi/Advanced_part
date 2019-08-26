@@ -1,4 +1,4 @@
-int* sortArrayByParityII(int* A, int ASize, int* returnSize){
+int* sortArrayByParityII(int* A, int ASize, int* returnSize){//开辟额外空间接收
     int *arr = malloc(ASize * sizeof(int));
     int i = 0;
     int j = 1;
