@@ -1,0 +1,20 @@
+int* sortArrayByParityII(int* A, int ASize, int* returnSize){
+    int *arr = malloc(ASize * sizeof(int));
+    int i = 0;
+    int j = 1;
+    int k = 0;
+    while(k < ASize)
+    {
+        if(A[k] % 2 == 0){
+            arr[i] = A[k];
+            i += 2;
+        }
+        else{
+            arr[j] = A[k];
+            j += 2;
+        }
+        k++;
+    }
+    *returnSize = ASize;
+    return arr;
+}
