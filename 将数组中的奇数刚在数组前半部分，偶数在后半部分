@@ -33,6 +33,5 @@ int main()
 	{
 		printf("%d ", arr[i]);
 	}
-	system("pause");
 	return 0;
 }
