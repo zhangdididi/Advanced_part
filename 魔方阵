@@ -18,7 +18,7 @@ void Func2(int arr[][ROW])
 			tmpRow = (tmpRow - 1 + ROW) % ROW;
 			tmpCol = (tmpCol + 1) % ROW;
 		}
-		arr[tmpRow][tmpCol] = i;
+		arr[tmpRow][tmpCol] = i;//将数字放进去
 	}
 }
 
