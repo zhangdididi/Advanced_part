@@ -11,11 +11,12 @@ void Func2(int arr[][ROW])
 		//判断上一行下一列是否有数据
 		if (arr[(tmpRow - 1 + ROW) % ROW][(tmpCol + 1) % ROW] != 0)
 		{
-			//有数据将数字赋给下一行,.如果超出，则从一整行开始循环
+			//有数据将数字赋给下一行,如果超出，则从一整列开始循环
 			tmpRow = (tmpRow + 1) % ROW;
 		}
 		else
 		{
+			//有数据将数字赋给下一列,如果超出，则从一整行开始循环
 			tmpRow = (tmpRow - 1 + ROW) % ROW;
 			tmpCol = (tmpCol + 1) % ROW;
 		}
